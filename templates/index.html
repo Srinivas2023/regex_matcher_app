@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Matcher App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Regex Matcher App</h1>
+        <form action="/results" method="POST">
+            <div class="form-group">
+                <label for="test_string">Test String:</label>
+                <textarea class="form-control" id="test_string" name="test_string" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="regex_pattern">Regex Pattern:</label>
+                <input type="text" class="form-control" id="regex_pattern" name="regex_pattern" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Find Matches</button>
+        </form>
+        <hr>
+        <h2>Email Validation</h2>
+        <form action="/validate_email" method="GET">
+            <button type="submit" class="btn btn-secondary">Go to Email Validator</button>
+        </form>
+    </div>
+</body>
+</html>

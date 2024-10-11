@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Matcher Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Regex Matcher Results</h1>
+        <p><strong>Test String:</strong> {{ test_string }}</p>
+        <p><strong>Regex Pattern:</strong> {{ regex_pattern }}</p>
+        <h2>Matches Found:</h2>
+        {% if matches %}
+            <ul class="list-group">
+                {% for match in matches %}
+                    <li class="list-group-item">
+                        Match: <strong>{{ match.match }}</strong><br>
+                        Start Position: {{ match.start }}<br>
+                        End Position: {{ match.end }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No matches found.</p>
+        {% endif %}
+        <a href="/" class="btn btn-primary mt-3">Try Again</a>
+    </div>
+</body>
+</html>

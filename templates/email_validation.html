@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Validator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Email Validator</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Validate</button>
+        </form>
+        {% if is_valid is not none %}
+            <div class="alert mt-3 {{ 'alert-success' if is_valid else 'alert-danger' }}">
+                {{ email }} is {{ 'valid' if is_valid else 'invalid' }}.
+            </div>
+        {% endif %}
+        <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+    </div>
+</body>
+</html>
